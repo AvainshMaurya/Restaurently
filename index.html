@@ -1,0 +1,572 @@
+<html>
+<head>
+    <title>Restaurantly</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            color: #fff;
+            line-height: 1.6;
+        }
+        /* Header Styles */
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+			margin-top:20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d4af37;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            color: #d4af37;
+        }
+
+        .language {
+            margin-left: 20px;
+        }
+
+        .book-btn {
+            background: #d4af37;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .book-btn:hover {
+            background:#CA762B;
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            height: 100vh;
+            background: url('img/gallery-4.png') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: left;
+            text-align: left;
+			padding-left:140px;    
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+
+            color: #EEEEEE;
+			text-align:left
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #F8F8FF;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #d4af37;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            margin:  8px;
+			padding:8px;
+			margin-right:1080px;
+            font-weight: bold;
+			text-align:center;
+
+        }
+
+        .btn:hover {
+            background: #CA762B;
+        }
+		.btn1 {
+            background: red;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            margin:  8px;
+			padding:8px;
+			margin-right:1040px;
+            font-weight: bold;
+			text-align:center;
+
+        }
+
+        .btn1:hover {
+            background: #CA762B;
+        }
+		
+		
+		.footer {
+		background-color: black;
+		padding: 40px 0;
+		color: #333;
+		font-family: Arial, sans-serif;
+		}
+
+		.footer-container {
+			display: flex;
+			justify-content: space-around;
+			max-width: 1200px;
+			margin: 0 auto;
+			flex-wrap: wrap;
+		}
+
+		.footer-section {
+			flex: 1;
+			min-width: 200px;
+			margin: 10px;
+		}
+		.footer-section h3 {
+			color: #007bff;
+			font-size: 1.5em;
+			margin-bottom: 10px;
+		}
+		.footer-section ul {
+			list-style: none;
+			padding: 0;
+		}
+		.footer-section ul li {
+			margin: 10px 0;
+		}
+		.footer-section ul li a {
+			color: #333;
+			text-decoration: none;
+		}
+
+		.footer-section ul li a:hover {
+			color: white;
+		}
+		.footer-bottom {
+			text-align: center;
+			padding-top: 20px;
+			border-top: 1px solid #ddd;
+			margin-top: 20px;
+		}
+		.footer-bottom a {
+			color: #007bff;
+			text-decoration: none;
+		}
+		.p{
+		color:red;
+		}
+		.menu {
+    display: flex;
+    gap: 20px;
+	padding:20px;
+	}
+
+	.item {
+		background-color: #fff;
+		padding: 20px;
+		border-radius: 10px;
+		text-align: center;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	}
+
+	.item img {
+		width: 150px;
+		height: auto;
+	}
+
+	.item h3,h1  {
+		margin: 5px 0;
+		margin: px 0;
+		color:black;
+		text-align:center;
+	}
+
+	.item p {
+		margin: 5px 0;
+		color:black;
+	}
+
+	.item button {
+		background-color: #ff4d4d;
+		color: white;
+		border: none;
+		padding: 10px 20px;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+
+	.item button:hover {
+		background-color: #e60000;
+	}
+	/* Basic reset & box-sizing */
+	* {
+	  margin: 0;
+	  padding: 0;
+	  box-sizing: border-box;
+	}
+
+	/* Body styles */
+	body {
+	  font-family: Arial, sans-serif;
+	  background-color: #ffffff;
+	  color: #333;
+	}
+
+	/* Container for the feature icons */
+	.features {
+	  display: flex;
+	  justify-content: space-evenly;
+	  align-items: flex-start;
+	  flex-wrap: wrap; /* allows wrapping on smaller screens */
+	  padding: 2rem;
+	  background-color: #fff;
+	}
+
+	/* Each individual feature box */
+	.feature {
+	  text-align: center;
+	  max-width: 150px;
+	  margin: 1rem;
+	}
+
+	/* Circular icon wrapper */
+	.icon-circle {
+	  width: 80px;
+	  height: 80px;
+	  margin: 0 auto 1rem auto;
+	  border-radius: 50%;
+	  background-color: #eaeaea;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+
+
+	/* Heading inside each feature box */
+	.feature h3 {
+	  margin-bottom: 0.5rem;
+	  font-size: 1rem;
+	  font-weight: 600;
+	  padding:20px;
+	}
+
+	/* Paragraph text inside each feature box */
+	.feature p {
+	  font-size: 0.9rem;
+	  color: #555;
+	}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Restaurantly</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html" target="blank" >About</a></li>
+                <li><a href="item.html">Menu</a></li>
+                <li><a href="specials.html">Specials</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="Chefs.html">Chefs</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" target="blank">Login </a></li>
+				<li><a href="feedback.html">Feedback</a></li>
+                <li><a href="table.html" class="book-btn">Book a Table</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to  <b style="color:red">Restaurantly</b></h1>
+        <p>Delivering great food for more than 18 years!</p>
+
+        <a href="item.html" class="btn">Our Menu</a>
+        <a href="table.html" class="btn">Book a Table</a>
+		<a href="specials.html" class="btn1">Today's Specials</a>
+    </section>
+	
+<div style="padding-left:30px; background-color:black; margin-bottom:5px;">
+	  <h1 style="color:white">Menu from Our<b style="color:red"> Restauranly</b></h1>
+    <div class="menu">
+        <div class="item">
+            <img src="img/burger.jpg" alt="Hot Chocolate">
+            <h3>Burger</h3>
+            <p>1 pis</p>
+            <p><s>₹149</s> <strong>₹76</strong> (51% off)</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="img/pasta.jpg" alt="Vietnamese Cold Coffee">
+            <h3>Pasta</h3>
+            <p>1 plate</p>
+            <p><s>₹119</s> <strong>₹90</strong> (20% off)</p>
+            <button>Add to Cart</button>
+        </div>
+		        <div class="item">
+            <img src="img/specials-3.png" alt="Vietnamese Cold Coffee" style="height:100px;">
+            <h3>Noodles</h3>
+            <p> 1 plate</p>
+            <p><s>₹179</s> <strong>₹109</strong> (56% off)</p>
+            <button>Add to Cart</button>
+        </div>
+		<div class="item">
+            <img src="img/biryani.jpg" alt="Hot Chocolate" style="height:100px;">
+            <h3>Biryani</h3>
+            <p>250 g</p>
+            <p><s>₹199</s> <strong>₹99</strong> (51% off)</p>
+            <button>Add to Cart</button>
+        </div>
+
+		<div class="item">
+            <img src="img/momos.jpg" alt="Hot Chocolate">
+            <h3>Momos</h3>
+            <p>5 pis</p>
+            <p><s>₹90</s> <strong>₹44</strong> (49% off)</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="img/panipuri.jpg" alt="Vietnamese Cold Coffee">
+            <h3>Pani Puri</h3>
+            <p>6 pic</p>
+            <p><s>₹50</s> <strong>₹40</strong> (10% off)</p>
+            <button>Add to Cart</button>
+        </div>
+	</div>	
+    </div>
+
+	
+	
+	
+  <section class="features">
+    <!-- Feature 1 -->
+    <div class="feature">
+      <div class="icon-circle">
+        <!-- Replace with your own icon or image -->
+        <img src="img/free.png" alt="Free Shipping Icon">
+      </div>
+      <h3>FREE SHIPPING</h3>
+      <p>On orders over ₹199</p>
+    </div>
+
+    <!-- Feature 2 -->
+    <div class="feature">
+      <div class="icon-circle">
+        <!-- Replace with your own icon or image -->
+        <img src="img/fresh.png" alt="Always Fresh Icon">
+      </div>
+      <h3>ALWAYS FRESH</h3>
+      <p>Product well package</p>
+    </div>
+
+    <!-- Feature 3 -->
+    <div class="feature">
+      <div class="icon-circle">
+        <!-- Replace with your own icon or image -->
+        <img src="img/quality.png" alt="Superior Quality Icon">
+      </div>
+      <h3>SUPERIOR QUALITY</h3>
+      <p>Quality Products</p>
+    </div>
+
+    <!-- Feature 4 -->
+    <div class="feature">
+      <div class="icon-circle">
+        <!-- Replace with your own icon or image -->
+        <img src="img/free1.png" alt="Support Icon">
+      </div>
+      <h3>FURTHER ENQUERY</h3>
+      <p>24/7 Support</p>
+    </div>
+  </section>
+  
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<!--footer -->
+	<div>
+	<footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h1 style="color:yellow; padding-right:90px;">Restaurantly</h1>
+                <p>Allu Nagar Dughria<br>Lucknow, SB 226020</p>
+                <p>Phone: +91 8299 2234 21</p>
+                <p>Email: mauryaavanish55@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="item.html">Item Menu</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="table.html">Book A Table</a></li>
+                    <li><a href="specials.html">Specials</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Our Newsletter</h3>
+                <p>Subscribe to our newsletter and receive the latest news about our products and services!</p><br>  
+				<input type="email" name="email" style="color:yellow; padding:5px; border-style:solid; border-color:#f5ee7e;">
+				<input type="submit" value="Subscribe" style="background-color:#f5ee7e; padding:5px; letter-spacing:1px; font-size: 14px;">
+				</div>
+                
+            
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Copyright Restaurantly  All Rights Reserved</p>
+            <p>Designed by <a href="https://www.linkedin.com/in/avanish-maurya-81834127b?utm_source=share&utm_campaign=share_via&utm_content
+									=profile&utm_medium=android_app">Er.Avanish Maurya</a></p>
+        </div>
+    </footer>
+	</div>
+</body>
+</html>

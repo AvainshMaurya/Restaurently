@@ -1,0 +1,255 @@
+<html>
+<head>
+    <title> Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9e8e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: ;
+    margin: 0;
+    flex-direction: column;
+	
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+	padding:20px;
+}
+
+.item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.item img {
+    width: 150px;
+    height: 180px;
+}
+
+.item h3 {
+    margin: 10px 0;
+}
+
+.item p {
+    margin: 5px 0;
+}
+
+.item button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.item button:hover {
+    background-color: #e60000;
+}
+
+.cart {
+    margin-top: 20px;
+    text-align: center;
+}
+.cart {
+      margin-top: 40px;
+      padding: 20px;
+      background: #dad5d4 ;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cart h2 {
+      margin-bottom: 20px;
+    }
+    .cart ul {
+      list-style: none;
+      padding: 0;
+    }
+    .cart li {
+      margin-bottom: 10px;
+    }
+	.print-btn {
+    background-color: #f16f45 ;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+	}
+
+	.print-btn:hover {
+    background-color:#f7dc72 ;
+	color:black;
+}
+	
+    h1 {
+	  color: #FFCC33 ;
+    }
+	h2{
+	color:black ;
+	letter-spacing:0.5px;
+	}
+	
+
+</style>
+<body>
+  <h1><b>Some Menu from Our Restauranly</b></h1>
+  <h2>Fast Food</h2>
+    <div class="menu">
+	
+        <div class="item">
+            <img src="img/burger.jpg" alt="Hot Chocolate">
+            <h3>Cheese Burger</h3>
+            <p>1 pic </p>
+            <p><s>₹99</s> <strong>₹49</strong> (50% off)</p>
+            <button onclick="addItem('Cheese Burger- ₹49')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="img/2.png" alt="Vietnamese Cold Coffee">
+            <h3>Samosa</h3>
+            <p>2 pic</p>
+            <p><s>₹49</s> <strong>₹39</strong> (10% off)</p>
+            <button onclick="addItem('Samosa - ₹39')">Add to Cart</button>
+        </div>
+		<div class="item">
+            <img src="img/specials-3.png" alt="Hot Chocolate">
+            <h3>Pizza</h3>
+            <p>1 pic/ medium</p>
+            <p><s>₹249</s> <strong>₹149</strong> (35% off)</p>
+            <button onclick="addItem('Pizza - ₹149')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="img/5.png" alt="Vietnamese Cold Coffee">
+            <h3>Sandwich</h3>
+            <p> 1 pic</p>
+            <p><s>₹79</s> <strong>₹39</strong> (50% off)</p>
+            <button onclick="addItem('Sandwich - ₹39')">Add to Cart</button>
+        </div>
+		<div class="item">
+            <img src="img/4.png" alt="Hot Chocolate">
+            <h3>French Fries</h3>
+            <p>100 g</p>
+            <p><s>₹99</s> <strong>₹40</strong> (59% off)</p>
+            <button onclick="addItem('French Fries- ₹40')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="img/3.png" alt="Vietnamese Cold Coffee">
+            <h3>Vegetable Roll</h3>
+            <p>1 pic</p>
+            <p><s>₹80</s> <strong>₹50</strong> (40% off)</p>
+            <button onclick="addItem('Vegetable Roll - ₹50')">Add to Cart</button>
+        </div>
+		
+    </div>
+	<h2>Coffee</h2>
+	    <div class="menu">
+        <div class="item">
+            <img src="img/specials-1.png" alt="Hot Chocolate">
+            <h3>Hot Coffee</h3>
+            <p>250 ml</p>
+            <p><s>₹179</s> <strong>₹109</strong> (51% off)</p>
+            <button onclick="addItem('Hot Chocolate - ₹109')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="img/specials-2.png" alt="Vietnamese Cold Coffee">
+            <h3>Cold Coffee</h3>
+            <p>450 ml</p>
+            <p><s>₹439</s> <strong>₹189</strong> (56% off)</p>
+            <button onclick="addItem('Vietnamese Cold Coffee - ₹189')">Add to Cart</button>
+        </div>
+		<div class="item">
+            <img src="img/specials-3.png" alt="Hot Chocolate">
+            <h3>Black Coffee</h3>
+            <p>100 ml</p>
+            <p><s>₹150</s> <strong>₹85</strong> (40% off)</p>
+            <button onclick="addItem('Black Chocolate - ₹85')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="img/specials-4.png" alt="Vietnamese Cold Coffee">
+            <h3>Flat Coffee</h3>
+            <p>150 ml</p>
+            <p><s>₹100</s> <strong>₹75</strong> (25% off)</p>
+            <button onclick="addItem('Flat Coffee - ₹75')">Add to Cart</button>
+        </div>
+		<div class="item">
+            <img src="img/specials-5.png" alt="Hot Chocolate">
+            <h3>Latte Coffee</h3>
+            <p>250 ml</p>
+            <p><s>₹300</s> <strong>₹150</strong> (50% off)</p>
+            <button onclick="addItem('Latte Chocolate - ₹150')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="img/caesar.jpg" alt="Vietnamese Cold Coffee">
+            <h3> Cold brew Coffee</h3>
+            <p>350 ml</p>
+            <p><s>₹439</s> <strong>₹189</strong> (56% off)</p>
+            <button onclick="addItem('Cold brew Coffee - ₹189')">Add to Cart</button>
+        </div>
+		
+    </div>
+	<h2>Traditional Food</h2>
+	    <div class="menu">
+        <div class="item">
+            <img src="img/specials-1.png" alt="Hot Chocolate">
+            <h3>Briyani</h3>
+            <p>250g</p>
+            <p><s>₹279</s> <strong>₹135</strong> (51% off)</p>
+            <button onclick="addItem('Briyani - ₹135')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="img/specials-2.png" alt="Vietnamese Cold Coffee">
+            <h3>Litti Chokha</h3>
+            <p>2 pic</p>
+            <p><s>₹99</s> <strong>₹40</strong> (59% off)</p>
+            <button onclick="addItem('Litti Chokha- ₹189')">Add to Cart</button>
+        </div>
+		<div class="item">
+            <img src="img/specials-3.png" alt="Hot Chocolate">
+            <h3>Chole Bhature</h3>
+            <p>1 Plate/2 pic</p>
+            <p><s>₹99</s> <strong>₹50</strong> (49% off)</p>
+            <button onclick="addItem('Chole Bhature- ₹50')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="img/specials-4.png" alt="Vietnamese Cold Coffee">
+            <h3>Rajma Chwal</h3>
+            <p>1 plate</p>
+            <p><s>₹59</s> <strong>₹40</strong> (20% off)</p>
+            <button onclick="addItem('Rajma Chwal - ₹40')">Add to Cart</button>
+        </div>
+		<div class="item">
+            <img src="img/specials-5.png" alt="Hot Chocolate">
+            <h3>Pav Bhaji</h3>
+            <p>1 Plate</p>
+            <p><s>₹179</s> <strong>₹109</strong> (35% off)</p>
+            <button onclick="addItem('Pav Bhaji - ₹109')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="img/caesar.jpg" alt="Vietnamese Cold Coffee">
+            <h3>Allo Parantha</h3>
+            <p>2 pic</p>
+            <p><s>₹149</s> <strong>₹75</strong> (50% off)</p>
+            <button onclick="addItem('Allo Parantha- ₹75')">Add to Cart</button>
+        </div>
+		
+    </div>
+    <div class="cart">
+        <h2 style="color:green">Your Cart</h2><hr>
+        <ul id="cartList"></ul>
+		<button   onclick="window.print()" class="print-btn">Print This Page</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

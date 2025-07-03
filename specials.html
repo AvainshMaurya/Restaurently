@@ -1,0 +1,162 @@
+<html>
+<head>
+  <title>Specials Menu</title>
+  <style>
+    body {
+      background: #fff8f0;
+      color: #333;
+    }
+
+    header {
+      background-color: #8b3e2f;
+      color: white;
+      padding: 1.5rem 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.8rem;
+    }
+
+    p {
+      margin: 0.5rem 0;
+    }
+
+    .specials-container {
+      max-width: 650px;
+      margin: 2rem auto;
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+	
+    }
+
+    .special {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .special img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .special-content {
+      padding: 2rem 1.5rem;
+	  
+    }
+
+    .special-content h2 {
+      margin: 0;
+      color: #8b3e2f;
+      font-size: 1.6rem;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #e67e22;
+      float: right;
+    }
+
+    .special-content p {
+      margin-top: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: black;
+      color: white;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .specials-container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+	button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+	
+	}
+
+	button:hover {
+    background-color: #e60000;
+	}
+	.special img{
+	 width: 100%;
+    height: 320px;;
+	
+	transition: transform 0.4s ease;
+    }
+
+    special img:hover img {
+      transform: scale(1.1);
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Today's Specials</h1>
+    <p>Fresh. Seasonal. Delicious.</p>
+  </header>
+
+  <div class="specials-container">
+    <div class="special">
+      <img src="img/spicals-7.jpg" class="img" alt="Grilled Lemon Herb Salmon">
+      <div class="special-content">
+        <h2>South Indian Food <span class="price">Rs-449</span></h2>
+        <p>Fresh Atlantic salmon grilled to perfection, served with garlic mashed potatoes and steamed vegetables.</p>
+		<button>Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="special">
+      <img src="img/spicals-8.jpg" alt="Truffle Mushroom Risotto">
+      <div class="special-content">
+        <h2>Special Indian Thali <span class="price">Rs-399</span></h2>
+		<br>
+        <p>Arborio rice slowly cooked with wild mushrooms and finished with a drizzle of white truffle oil.</p>
+		<button>Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="special">
+      <img src="img/spicals-9.jpg" alt="Spicy Mango Chicken Tacos">
+      <div class="special-content">
+        <h2>Desi Thali <br><span class="price">Rs-299</span></h2>
+        <p>Three tacos filled with grilled chicken, mango salsa, spicy aioli, and fresh cilantro.</p>
+		<button>Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="special">
+      <img src="img/spicals-10.jpg" alt="Chocolate Lava Cake">
+      <div class="special-content">
+        <h2>Special FastFood <span class="price">Rs-199</span></h2>
+        <p>Rich chocolate cake with a molten center, served warm with a scoop of vanilla ice cream.</p>
+		<button>Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 The  Restaurantly. All rights reserved.
+  </footer>
+</body>
+</html>
